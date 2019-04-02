@@ -16,6 +16,11 @@ import com.silabs.thunderboard.R;
  * The UVMeter and the TextView are added to the layout dynamically
  *
  */
+
+/*
+ *  voltage estimate = ((percent/100 * 0.7) + expected voltage
+ *  https://electronics.stackexchange.com/questions/110104/calculating-battery-percentage-using-an-arduino
+ * */
 public class DemoEnvironmentUVControl extends LinearLayout {
 
     private final String measurementString;
@@ -51,7 +56,7 @@ public class DemoEnvironmentUVControl extends LinearLayout {
         textView.setPadding(0, res.getDimensionPixelSize(R.dimen.space_S), 0, 0);
         addView(textView, layoutParams);
 
-        measurementString = context.getString(R.string.environment_uv_unit);
+        measurementString = context.getString(R.string.usb_power);
 
         setUVIndex(0);
     }
@@ -65,3 +70,4 @@ public class DemoEnvironmentUVControl extends LinearLayout {
         uvMeter.setValue(uvIndex, isEnabled());
     }
 }
+

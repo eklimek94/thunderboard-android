@@ -154,11 +154,7 @@ public class DemosSelectionActivity extends ThunderBoardActivity implements Demo
                 startActivity(intent);
                 return true;
 
-            case R.id.action_history:
-                Uri uri = Uri.parse(String.format("%s%s/%s", BuildConfig.CLOUD_DEMO_URL, deviceId, "sessions"));
-                intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-                return true;
+
 
             case android.R.id.home:
                 this.onBackPressed();
@@ -187,18 +183,11 @@ public class DemosSelectionActivity extends ThunderBoardActivity implements Demo
     }
 
     private void setupDemosList() {
-        demosList.add(new Demo(getString(R.string.demo_motion),
-                R.drawable.ic_motion,
-                DemoMotionActivity.class,
-                DemoMotionActivity.isDemoAllowed()));
         demosList.add(new Demo(getString(R.string.demo_environment),
                 R.drawable.ic_environmental,
                 DemoEnvironmentActivity.class,
                 DemoEnvironmentActivity.isDemoAllowed()));
-        demosList.add(new Demo(getString(R.string.demo_io),
-                R.drawable.ic_io,
-                DemoIOActivity.class,
-                DemoIOActivity.isDemoAllowed()));
+
     }
 
     @Override

@@ -21,7 +21,6 @@ import timber.log.Timber;
 public class DemosPresenter {
 
     private final BleManager bleManager;
-    private final CloudManager cloudManager;
 
     private DemosViewListener viewListener;
 
@@ -34,19 +33,16 @@ public class DemosPresenter {
     @Inject
     public DemosPresenter(BleManager bleManager, CloudManager cloudManager) {
         this.bleManager = bleManager;
-        this.cloudManager = cloudManager;
     }
 
     public void setViewListener(DemosViewListener viewListener, String deviceAddress) {
         this.viewListener = viewListener;
         subscribe(deviceAddress);
-        cloudManager.startConnectionMonitor();
     }
 
     public void clearViewListener() {
         unsubscribe();
         viewListener = null;
-        cloudManager.stopConnectionMonitor();
     }
 
     public void setNotificationDevice(ThunderBoardDevice notificationDevice) {

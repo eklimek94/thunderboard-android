@@ -133,7 +133,7 @@
     <string name="environment_temp">Temperature</string>
     <string name="environment_humidity">Humidity</string>
     <string name="environment_ambient">Ambient Light</string>
-    <string name="environment_uv">UV Index</string>
+    <string name="environment_uv">Voltage</string>
     <string name="environment_uv_unit">%d</string>
     <string name="environment_pressure">Air Pressure</string>
     <string name="environment_sound_level">Sound Level</string>

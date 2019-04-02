@@ -188,20 +188,8 @@ public class RangeColor {
     }
 
     public enum Temperature implements RangeColorEnum {
-        LOWEST(-Float.MAX_VALUE, -28.8f, R.color.sl_grey),
-        ALMOST_LOWEST(-28.8f, -23.3f, R.color.sl_dark_grey),
-        MUCH_LOWER(-23.3f, -17.7f, R.color.sl_violet),
-        LOWER(-17.7f, -12.2f, R.color.sl_dark_violet),
-        LOW(-12.2f, -6.6f, R.color.sl_blue),
-        MEDIUM_LOWER(-6.6f, -1.1f, R.color.sl_light_blue),
-        MEDIUM_LOW(-1.1f, 4.4f, R.color.sl_medium_green),
-        MEDIUM(4.4f, 10.f, R.color.sl_terbium_green),
-        MEDIUM_HIGH(1.0f, 15.5f, R.color.sl_bright_green),
-        MEDUIM_HIGHER(15.5f, 21.1f, R.color.sl_yellow),
-        HIGH(21.1f, 26.6f, R.color.sl_yellow_orange),
-        HIGHER(26.6f, 32.2f, R.color.sl_pink),
-        ALMOST_HIGHEST(32.2f, 37.7f, R.color.sl_red_orange),
-        HIGHEST(37.7f, Float.MAX_VALUE, R.color.sl_red);
+        LOWEST(-Float.MAX_VALUE, 194.0f, R.color.sl_bright_green),
+        HIGHEST(194.0f, Float.MAX_VALUE, R.color.sl_red);
 
         private final RangeColorImpl impl;
 

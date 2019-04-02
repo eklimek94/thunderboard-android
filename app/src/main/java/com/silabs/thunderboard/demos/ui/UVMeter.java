@@ -21,7 +21,7 @@ public class UVMeter extends BaseEnvironmentMeter {
 
     @Override
     protected int getInactiveIconResource() {
-        return R.drawable.ic_uv_inactive;
+        return R.drawable.ic_uv;
     }
 
     @Override
